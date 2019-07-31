@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Anket;
 use Illuminate\Http\Request;
 
+require_once 'PHPWord.php'; //включение библиотеки PHPWord
+
+
 require "vendor/autoload.php";
 
 class DocsController extends Controller
@@ -32,7 +35,7 @@ class DocsController extends Controller
         if ($api_date == null) {
             return null;
         }
-        
+
     }
 
     //API simulated
@@ -95,5 +98,18 @@ class DocsController extends Controller
         }
 
         return $result;
+    }
+
+    public function replase($seach, $filename)
+    {
+        $PHPWord = new \PhpOffice\PhpWord\PhpWord();
+        $filename = 'doc/template.docx';//файл шаблона
+        $tempfilename = 'doc/new_temp.docx'; //создаваемого из шаблона документа
+
+        // $PHPWord = new PHPWord(); //создаем объект
+        // $seach = "";
+        $document = $PHPWord->loadTemplate($filename); //загружаем шаблон
+        $document->setValue('%' . $seach . '$', 'replace');//Магия: ищем в шаблоне текст ${search}, меняем на 'replace'
+        $document->save($tempfilename); //сохраняем файл
     }
 }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a29f6c5c-4045-44d0-ac95-d67f5568fd5c" name="Default" comment="">
+    <list default="true" id="a29f6c5c-4045-44d0-ac95-d67f5568fd5c" name="Default" comment="add generator.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +30,20 @@
       <file leaf-file-name="DocsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DocsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="662">
+              <caret line="63" column="65" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -91,6 +99,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_07_31_180405_create_ankets_table.php" />
         <option value="$PROJECT_DIR$/app/Anket.php" />
         <option value="$PROJECT_DIR$/resources/views/input.blade.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DocsController.php" />
       </list>
     </option>
@@ -316,7 +325,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564592862137</updated>
-      <workItem from="1564592863476" duration="10085000" />
+      <workItem from="1564592863476" duration="15054000" />
     </task>
     <task id="LOCAL-00001" summary="Add migration for docs table">
       <created>1564596653445</created>
@@ -332,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564599274506</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add api simulation/">
+      <created>1564604693175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564604693175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10085000" />
+    <option name="totallyTimeSpent" value="15054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -376,7 +392,9 @@
     <MESSAGE value="Add migration for docs table" />
     <MESSAGE value="Add save anket" />
     <MESSAGE value="Add save bank date in anket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add save bank date in anket" />
+    <MESSAGE value="Add api simulation/" />
+    <MESSAGE value="add generator." />
+    <option name="LAST_COMMIT_MESSAGE" value="add generator." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
@@ -441,10 +459,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DocsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="662">
+          <caret line="63" column="65" selection-start-line="63" selection-start-column="65" selection-end-line="63" selection-end-column="65" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
