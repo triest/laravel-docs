@@ -13,7 +13,7 @@ class CreateAnketsTable extends Migration
      */
     public function up()
     {
-        Schema::create('anket', function (Blueprint $table) {
+        Schema::create('ankets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('inn');
             $table->string('pc', 20);
