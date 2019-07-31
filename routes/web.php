@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('input');
 });
+
+Route::post('/doc/input', 'DocsController@store')->name('inputDocDate');
