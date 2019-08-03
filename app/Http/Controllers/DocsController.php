@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Anket;
 use Illuminate\Http\Request;
+use Faker\Factory as Faker;
 
-require_once 'PHPWord.php'; //включение библиотеки PHPWord
+//require_once 'PHPWord.php'; //включение библиотеки PHPWord
 
 
-require "vendor/autoload.php";
+//require "vendor/autoload.php";
 
 class DocsController extends Controller
 {
@@ -32,16 +33,19 @@ class DocsController extends Controller
         $anket->save();
 
         $api_date = $this->api($request->inn);
-        if ($api_date == null) {
-            return null;
-        }
+        /*   if ($api_date == null) {
+               return null;
+           }*/
+
+        $this->replace("FullName", "test");
+        return "ok";
 
     }
 
     //API simulated
     public function api($inn)
     {
-        $faker = Faker\Factory::create();
+        $faker = Faker::create();
         $rez = array();
         $rez["FullName"] = $this->generateRandomString(20);
         $rez["ShortName"] = $this->generateRandomString(10);
@@ -100,16 +104,20 @@ class DocsController extends Controller
         return $result;
     }
 
-    public function replase($seach, $filename)
+    public function replace($seach, $replace)
     {
-        $PHPWord = new \PhpOffice\PhpWord\PhpWord();
-        $filename = 'doc/template.docx';//файл шаблона
-        $tempfilename = 'doc/new_temp.docx'; //создаваемого из шаблона документа
+        
+        $filename = base_path() . '/public/templates/test.docx';//файл шаблона
 
-        // $PHPWord = new PHPWord(); //создаем объект
-        // $seach = "";
-        $document = $PHPWord->loadTemplate($filename); //загружаем шаблон
-        $document->setValue('%' . $seach . '$', 'replace');//Магия: ищем в шаблоне текст ${search}, меняем на 'replace'
-        $document->save($tempfilename); //сохраняем файл
+
+        $file = base_path() . '/public/templates/test.docx';
+
+        $phpword = new \PhpOffice\PhpWord\TemplateProcessor($file);
+
+        $phpword->setValue('{name}', 'Santosh');
+        $phpword->setValue('{lastname}', 'Achari');
+        $phpword->setValue('{officeAddress}', 'Yahoo');
+
+        $phpword->saveAs('edited.docx');
     }
 }
