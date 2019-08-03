@@ -106,18 +106,17 @@ class DocsController extends Controller
 
     public function replace($seach, $replace)
     {
-        
-        $filename = base_path() . '/public/templates/test.docx';//файл шаблона
-
-
         $file = base_path() . '/public/templates/test.docx';
 
         $phpword = new \PhpOffice\PhpWord\TemplateProcessor($file);
 
-        $phpword->setValue('{name}', 'Santosh');
+        $phpword->setValue('%name%', 'Santosh');
         $phpword->setValue('{lastname}', 'Achari');
+        $phpword->setValue('{name}', 'Achari');
         $phpword->setValue('{officeAddress}', 'Yahoo');
 
         $phpword->saveAs('edited.docx');
     }
+
+
 }
